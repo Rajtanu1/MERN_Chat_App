@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+  <html>
+    <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/1.7.3/socket.io.js"></script>
+    <script src="https://kit.fontawesome.com/82fa38c892.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Space+Grotesk:wght@500&display=swap" rel="stylesheet">
+    <link href="./chat-app-home-styles.css" rel="stylesheet">
+    <title>ChatBudd</title>
+    <link rel="shortcut icon" type="image/x-icon" href="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Circle-icons-chat.svg/1024px-Circle-icons-chat.svg.png">
+    </head>
+    <body>
+      <div id="chat-app-interface">
+        <div id="profile-and-chats-container">
+          <div id="profile-card">
+            <img id="profile-image" src="<%= userImage %>" alt="" referrerpolicy="no-referrer"/>
+            <p id="profile-name"><%= username %></p>
+            <ul id="active-list"><span id="active-text"><i class="fa-solid fa-user"></i>active</span>
+              <div id="active-users">
+                <p>No active users</p>
+              </div>
+            </ul>
+            <p id="logout"><i class="fa-solid fa-power-off"></i>logout</p>
+          </div>
+          <div id="users-container">
+            <div id="users-container-title">
+             Chats
+              <i class="fas fa-users"></i>
+            </div>
+            <div id="users-list">
+              <div class="user">
+              <img id="user-image" src="./images/people-group-avatar.png" alt="">
+              <div id="user-name">General
+                <span class="message_notification"></span><br>
+                <em>General Chat-room.</em>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="chat-window">
+          <div id="room-name-header">
+            <img id="room-profile-pic" src="./images/people-group-avatar.png" alt=""/>
+            <div id="room-name">General</div> 
+          </div>
+          <div id="conversation-box"></div>
+            <div id="enter-text-field">
+              <input type="text" id="enter-message" name="enter-message" placeholder="type a message here..." />
+              <button type="button" id="send-button"><i class="fa-solid fa-paper-plane"></i></button>
+            </div>
+        </div>
+        <div class="navigation-button"><i class="fa-solid fa-bars"></i></i></div>
+        <div class="navbar">
+          <div class="navbar_icon"><i class="fa-solid fa-circle-user"></i></div>
+          <div class="navbar_icon"><i class="fa-solid fa-user-group"></i></div>
+          <div class="navbar_icon selected"><i class="fa-solid fa-message"></i></div>
+        </div>
+        <div class="notifying-text">You've have a new message!</div>
+      </div>
+      <% if (userImage === "") { %>
+      <div class="avatar-container">
+        <div class="avatar-list">
+          <div class="selected-avatar">
+            <img class="selected-avatar_avatar" src="" alt="">
+            <span>Choose your avatar.</span>
+          </div>
+          <div class="avatars-first-row">
+            <img class="avatar" src="./images/female-collegeGirl-avatar.png" alt="">
+            <img class="avatar" src="./images/female-blonde-avatar.png" alt="">
+            <img class="avatar" src="./images/female-nerdy-avatar.png" alt="">
+          </div>
+          <div class="avatars-second-row">
+            <img class="avatar" src="./images/male-beard-avatar.png" alt="">
+            <img class="avatar" src="./images/male-homeboy-avatar.png" alt="">
+            <img class="avatar" src="./images/male-collegeLad-avatar.png" alt="">
+          </div>
+          <div class="avatars-third-row">
+            <div class="avatar-confirm-button">Confirm</div>
+          </div>
+        </div>
+      </div>
+      <% } %>
+      <script src="./chat-app-home-script.js"></script>
+    </body>
+  </html>

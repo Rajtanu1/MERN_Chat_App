@@ -1,0 +1,425 @@
+body {
+  color: white;
+  --background-hue: hsl(273.7, 20.4%, 39.4%);
+  background-color: hsl(0, 0%, 96%);
+}
+
+a {
+all: unset;
+color: hsl(25, 100%, 60%);
+}
+
+a:hover {
+text-decoration: underline;
+text-decoration-color: inherit;
+text-decoration-style: solid;
+text-decoration-thickness: 1.5px;
+}
+
+#react-container {
+width: 78%;
+margin: 5% auto;
+}
+
+#form-container {
+position: relative;
+width: 100%;
+display: flex;
+border-radius: 1.5rem;
+box-shadow: 1px 1px 30px hsla(0, 20%, 36%, 0.4);
+overflow: hidden;
+cursor: pointer;
+}
+
+#img-container {
+width: 50%;
+position: relative;
+overflow: hidden;
+background-color: white;
+}
+
+img {
+width: 100%;
+height: 85%;
+display: block;
+position: absolute;
+margin: 19% 0% 0% 3%;
+clip-path: inset(15% 0% 25% 0%);
+}
+
+/* style rules for Signup form  */
+#signUp-form-container {
+width: 50%;
+font-family: "Fredoka One";
+font-weight: 500;
+background-color: var(--background-hue);
+}
+
+#signUp-header {
+width: 77%;
+font-size: 2rem;
+margin: 3.5rem 6.8% 2rem;
+text-align: center;
+}
+
+.create-account-text {
+  font-size: 1rem;
+}
+
+
+#info-section {
+margin: 0px 2.5rem;
+border: .5px solid transparent;
+font-weight: 50;
+}
+
+#name-section, #email-section, #create-password-section, #confirm-pass-section {
+margin-top: 1.2rem;
+width: 100%;
+}
+
+#username, #user-email, #user-password, #confirm-password {
+width: 84%;
+border-bottom:2px solid white;
+}
+
+.username, .email, .password, .confirm-password {
+  width: 100%;
+  height: 1.8rem; 
+  padding-top: .5rem;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+.error {
+  color: lightblue;
+}
+
+label {
+display: block;
+margin-bottom: .85rem;
+}
+
+input {
+border: none;
+background-color: transparent;
+color: white;
+font-family: "Fredoka One";
+font-size: 18px;
+transition: transform .25s;
+outline: 0;
+}
+
+input:focus-within {
+transform: translateY(7px);
+}
+
+#info-section i {
+margin-left: 1.2%;
+font-size: 1.3rem;
+}
+
+.fa-eye-slash:hover {
+  opacity: .7;
+}
+
+#submit-button {
+margin: .53rem 2.5rem .4rem;
+}
+
+button {
+width: 45%;
+height: 3rem;
+display: block;
+font-family: "Fredoka One";
+font-size: 1.5rem;
+border: none;
+border-radius: 10px;
+background-color: hsl(25, 100%, 60%);
+color: white;
+transition: background-color .07s, color .07s;
+}
+
+button:hover {
+background-color: white;
+color:hsl(25, 100%, 60%);
+}
+
+#logIn-text {
+margin: 0px 2.5rem 2rem;
+font-weight: 50;
+width: max-content;
+}
+
+/*style rules for the the image container */ 
+#circle-top {
+width: 50%;
+height: 35%;
+position: absolute;
+top: -8%;
+right: -15%;
+border-radius: 50%;
+transform: scale(1.3);
+background-color:hsl(31, 100%, 65%);
+}
+
+#circle-bottom {
+width: 50%;
+height: 35%;
+position: absolute;
+bottom: -15%;
+transform: scale(1.1);
+border-radius: 50%;
+background-color:var(--background-hue);
+}
+
+
+#animated-block {
+width: max-content;
+position: relative;
+top: 15%;
+left: 12%;
+padding: 1.1rem 0.9rem;
+border: 1px solid transparent;
+border-radius: 20px;
+text-align: center;
+font-family: "Fredoka One";
+font-size: 30px;
+font-weight: 50;
+background:var(--background-hue);
+animation-name: float-message;
+animation-duration: .75s;
+animation-direction: alternate;
+animation-iteration-count: infinite;
+}
+
+#animated-block::after {
+content: "";
+display: block;
+position: absolute;
+bottom: -6px;
+left: 41%;
+width: 20px;
+height: 20px; 
+transform: rotate(45deg);
+background-color: inherit;
+}
+
+@keyframes float-message {
+from {
+   transform: translateY(0px);
+}
+to {
+ transform: translateY(15px);
+}
+}
+
+/* style rules the login form */
+#logIn-form-container {
+position: absolute;
+width: 50%;
+font-family: "Fredoka One";
+font-weight: 500;
+background-color: hsl(274, 17%, 45%); 
+transition: transform 1.5s;
+}
+
+#logIn-header {
+width: 77%;
+margin: auto;
+}
+
+#logIn-title {
+width: max-content;
+margin: 4.8rem auto 0.5rem auto;
+}
+
+#create-account-link {
+width: max-content;
+margin: auto;
+}
+
+#logIn-details {
+width: 60%;
+margin: 4.2rem auto;
+}
+
+#logIn-email {
+margin-bottom: 1.23rem;
+}
+
+#logIn-details input {
+width: 87%;
+border-bottom: 2px solid white;
+}
+
+i {
+  font-size: 1.4rem;
+}
+
+#logIn-button button {
+  width: 60%;
+  margin: auto;
+}
+
+#google-button {
+width: 70%;
+margin: 0px auto 5rem;
+text-align: center;
+}
+
+#google-button i {
+font-size: 1.5rem;
+margin: -1.3px 1%;
+}
+
+#or {
+position: relative;
+border: 1px solid transparent;
+border-radius: 50%;
+width: 2.5rem;
+height: 2.3rem;
+box-sizing: border-box;
+padding-top: 8px;
+margin: 1rem auto;
+background-color: white;
+color: hsl(274, 25%, 45%);
+}
+
+#or::before {
+content: "";
+display: block;
+position: absolute;
+left: 0px;
+top: 1rem;
+z-index: -2;
+width: 10px;
+height: 1.5px;
+transform: scaleX(18) translateX(.7px);
+background-color: white;
+}
+
+#google-logIn-button {
+display: flex;
+justify-content: center;
+width: 87%;
+height: 3rem;
+margin: auto;
+padding-top: .8rem;
+box-sizing: border-box;
+border: none;
+border-radius: 8px;
+font-family: "Fredoka One";
+font-size: 1.1rem;
+color: white;
+background-color:hsl(16, 100%, 46%);
+text-decoration: unset;
+}
+
+#google-logIn-button, #logIn-button button {
+  transition: transform .3s;
+}
+
+#logIn-button button:hover {
+  transform: scale(1.05);
+  color: hsl(25, 100%, 60%);
+  background-color: white;
+}
+
+#google-logIn-button:hover {
+  transform: scale(1.05);
+  color: hsl(16, 100%, 46%);
+  background-color: white;
+}
+
+.slide-down {
+  transform: translateY(100%);
+}
+
+/* rules for responsiveness to respond to different screen sizes */
+@media (min-width: 769px) and (max-width: 1080px){
+body {
+  margin: 0px;
+}
+
+#react-container {
+ width: 100%;
+ margin: 0px;
+}
+
+#form-container {
+  border-radius: 0px;
+}
+
+img {
+ display: block;
+ margin-top: 21.5%;
+}
+
+}
+
+@media (max-width: 768px) {
+  body {
+    margin: 0px;
+  }
+
+#react-container {
+ width: 100%;
+ margin: 0px;
+}
+
+#form-container {
+  border-radius: 0px;
+}
+
+#signUp-form-container, #logIn-form-container {
+ width: 100%;
+}
+
+#signUp-header{
+ width: 82%;
+}
+
+
+#username, #user-email, #user-password, #confirm-password {
+width: 88%;
+}
+
+
+#info-section i {
+margin: 0%;
+}
+
+#logIn-text {
+margin: 0px auto 2rem;
+}
+
+#submit-button [type=submit] {
+width: 96%;
+}
+
+img {
+position: static;
+}
+
+#img-container {
+display: none;
+}
+
+#google-button {
+ width: 87%;
+}
+
+#logIn-button button {
+  width: 77%;
+}
+
+#logIn-details {
+  width: 80%;
+}
+
+#logIn-details input {
+  width: 88%;
+}
+
+}
