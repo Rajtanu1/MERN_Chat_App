@@ -1,5 +1,5 @@
    //create socket connection
-   let socket = io.connect(`https://${window.location.host}`);
+   let socket = io.connect(`http://${window.location.host}`);
   
    //query DOM
    let user = document.getElementById('profile-name');
@@ -92,7 +92,7 @@
    });
 
    logoutOption.addEventListener('click', function(event) {
-     window.location.href = `https://${window.location.host}/logout`;
+     window.location.href = `http://${window.location.host}/logout`;
    })
 
    navButton.addEventListener('click', function(event) {

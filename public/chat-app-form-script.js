@@ -2,7 +2,7 @@
 let FormImage = () => {
   return (
     <div id="img-container">
-      <img src="https://cdni.iconscout.com/illustration/free/preview/sign-up-form-4575543-3798675.png?w=0&h=700" alt="signup-form" />
+      <img src="http://cdni.iconscout.com/illustration/free/preview/sign-up-form-4575543-3798675.png?w=0&h=700" alt="signup-form" />
       <div id="circle-top"></div>
       <div id="circle-bottom"></div>
       <div id="animated-block">Login</div> 
@@ -78,7 +78,7 @@ let LogIn = (props) => {
       </div>
       <div id="google-button">
         <p id="or">Or</p>
-        <a href={`https://${window.location.hostname}/auth/google`} id="google-logIn-button"><i className="fa-brands fa-google"></i>&nbsp;Login in with Google</a>
+        <a href={`http://${window.location.hostname}:3000/auth/google`} id="google-logIn-button"><i className="fa-brands fa-google"></i>&nbsp;Login in with Google</a>
       </div>
     </form>
   )
@@ -164,7 +164,7 @@ class FormContainer extends React.Component {
         }
       } 
       if(confirmPasswordErrDiv.textContent === "") {
-       httpRequest.open('POST', `https://${window.location.hostname}/form`, true);
+       httpRequest.open('POST', `http://${window.location.hostname}:3000/form`, true);
        httpRequest.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
        httpRequest.send(JSON.stringify(formDataObj));
        httpRequest.onload = function() {
@@ -206,12 +206,12 @@ class FormContainer extends React.Component {
 
      emailErr.textContent = "";
      passwordErr.textContent = "";
-     httpRequest.open("POST", `https://${window.location.hostname}/login`, true);
+     httpRequest.open("POST", `http://${window.location.hostname}:3000/login`, true);
      httpRequest.setRequestHeader("Content-Type", "application/json; charset=UTF-8");
      httpRequest.send(JSON.stringify(loginData));
      httpRequest.onload = function(event) {
        if(httpRequest.readyState === 4 && httpRequest.status === 200) {
-         window.location.href = `https://${window.location.hostname}/homepage`;
+         window.location.href = `http://${window.location.hostname}:3000/homepage`;
        } else {
          let errorObj = JSON.parse(httpRequest.responseText);
         //passing error data to elements received as json response
